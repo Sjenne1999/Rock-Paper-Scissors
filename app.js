@@ -54,6 +54,7 @@ function gameRound (playerSelection, computerSelection) {
 function game () {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt('Choose your battle weapon: ROCK, PAPER, SCISSORS');
+        let computerSelection = computerPlay();
         gameRound (playerSelection, computerSelection);
     }
     if (playerWin > computerWin) {
@@ -62,5 +63,4 @@ function game () {
     else console.log('You are dead');
 }
 
-const computerSelection = computerPlay();
 game();
