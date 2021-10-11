@@ -19,7 +19,7 @@ function gameRound (playerSelection, computerSelection) {
     computerSelection = computerSelection.toLowerCase();
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerWin++;
-        console.log("You're a Loser!!!");
+        console.log("Round lost! Remember if you you lose you die!!!");
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerWin++;
@@ -27,7 +27,7 @@ function gameRound (playerSelection, computerSelection) {
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         computerWin++;
-        console.log("You're such a dissapointment!!!");
+        console.log("Noooo, you can not die today!!!");
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerWin++;
@@ -35,14 +35,14 @@ function gameRound (playerSelection, computerSelection) {
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerWin++;
-        console.log('Man you suck!!!');
+        console.log("Don't die!!!");
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerWin++;
-        console.log('Keep winning or you will be sorry');
+        console.log('Keep winning or it could be your last');
     }
     else if (playerSelection === computerSelection) {
-        console.log('How are you not smarter than a computer?');
+        console.log('Draw!!!');
     }
     else {
         console.log('You selected an invalid weapon');
@@ -57,9 +57,9 @@ function game () {
         gameRound (playerSelection, computerSelection);
     }
     if (playerWin > computerWin) {
-        console.log('You won! Play again!');
+        console.log('You won! Time for the next game!');
     }
-    else console.log('How can you not beat a computer!');
+    else console.log('You are dead');
 }
 
 const computerSelection = computerPlay();
