@@ -19,27 +19,27 @@ function gameRound (playerSelection, computerSelection) {
     computerSelection = computerSelection.toLowerCase();
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerWin++;
-        console.log("Round lost! Remember if you you lose you die!!!");
+        console.log("Round lost!");
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerWin++;
-        console.log("You're kicking their butt! Keep going!");
+        console.log("Round won!");
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         computerWin++;
-        console.log("Noooo, you can not die today!!!");
+        console.log("Round lost!");
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerWin++;
-        console.log('Keep winning!!!');
+        console.log('Round won!');
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerWin++;
-        console.log("Don't die!!!");
+        console.log("Round lost!");
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerWin++;
-        console.log('Keep winning or it could be your last');
+        console.log('Round won!');
     }
     else if (playerSelection === computerSelection) {
         console.log('Draw!!!');
@@ -58,9 +58,9 @@ function game () {
         gameRound (playerSelection, computerSelection);
     }
     if (playerWin > computerWin) {
-        console.log('You won! Time for the next game!');
+        console.log('You are amazing!');
     }
-    else console.log('You are dead');
+    else console.log('You suck!');
 }
 
 game();
