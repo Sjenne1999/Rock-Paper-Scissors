@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Into the Flames</title>
-    <script src="app.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squid Game RPS </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"/>
+    <link rel="icon" href="Square.svg">
+    <script
+        src="https://kit.fontawesome.com/4c536a6bd5.js"
+        crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="title">INTO THE FLAMES</div>
-        </nav>
+    <header class="header">
+        <img class= "titleimage" src="images/sqtitle.png">
     </header>
+    <main class="main">
+        <div class="scoreboard">
+        <h2 class="score-info" id="scoreInfo">Choose your sign</h2>
+        <h3 class="score-message" id="scoreMessage"> First to score 5 points wins the game </h3>
+        <div class="scores-container">
+            <div class="score-box">
+            <div class="sign" id="playerSign"> <img class= "watcher" src="squareman.png"> </div>
+            <p class="score" id="playerScore"></p>
+            </div>
+            <div class="score-box">
+            <div class="sign" id="computerSign"></div>
+            <p class="score" id="computerScore"></p>
+            </div>
+        </div>
+        </div>
+        <div class="buttons">
+        <button class="btn btn-square" id="rockBtn">
+            <div class="sign"> <img class="svg" src="Circle.svg"> </div>
+        </button>
+        <button class="btn btn-square" id="paperBtn">
+            <div class="sign"> <img class="svg" src="Square.svg"> </div>
+        </button>
+        <button class="btn btn-square" id="scissorsBtn">
+            <div class="sign"> <img class="svg" src="Triangle.svg"> </div>
+        </button>
+        </div>
+    </main>
+    <div class="modal" id="endgameModal">
+        <p class="modal-title" id="endgameMsg"></p>
+        <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="app.js"></script> 
 </body>
 </html>
